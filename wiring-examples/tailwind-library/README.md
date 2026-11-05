@@ -11,6 +11,7 @@ folder. Each file is the project wiring for a lab at `<repo>/lab/`, with the lib
 | `tailwind.config.ts` | Spreads the library's Tailwind config, anchors its `content` globs to the repo root, and adds `entries/**/*.{ts,tsx}`, so the classes an entry uses are generated. | The import path of the library's config, when it is not `../tailwind.config`. |
 | `tsconfig.json` | Type-checks the stage and the entries. `paths` mirrors the Vite aliases, so an import that runs also type-checks. | The same `<ALIAS>` / `<ALIAS_TARGET>` pairs as `vite.config.ts`. Drop the `/*` line for an alias that names one file. |
 | `.eslintrc.json` | Ignores every file in the lab folder. | Nothing. |
+| `.gitignore` | Ignores `.vite-cache/`, the dev server's cache in the lab folder. | Nothing. |
 | `lab.css` | Sets the white canvas to the library's page surface. | `<LIBRARY_SURFACE_TOKEN>`: the custom property for that surface, e.g. `--surface-primary`. Leave the file out to keep plain `#ffffff`. |
 | `PROJECT.md` | The library's conventions, as `GUIDE.md` asks for them. | Every `<…>` placeholder. |
 

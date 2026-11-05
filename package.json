@@ -1,12 +1,13 @@
 {
   "name": "ui-component-lab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@12.5.1",
   "scripts": {
     "dev": "vite",
-    "check": "tsc -p tsconfig.json"
+    "check": "node scripts/check-version.mjs && tsc -p tsconfig.json"
   },
   "devDependencies": {
     "@types/node": "24.19.2",

@@ -7,8 +7,10 @@ changes.
 
 This copy describes the standalone demo in the `ui-component-lab` repository, where a tiny
 stand-in library, `demo-library/`, plays the part of a real one. It is also the template: every
-`##` section below is one fact the install skill must fill in for a real library. *Fill in* under
-each heading says what that section holds; the rest is this repository's value.
+`##` section below is one fact an install — by hand, or by the `figma-tools:create-ui-component-lab`
+skill — must fill in for a real library. *Fill in* under each heading says what that section
+holds; the rest is this repository's value. A library's copy keeps every heading as it is here,
+because `GUIDE.md` refers to the sections by name.
 
 ## Lab folder
 
@@ -88,6 +90,14 @@ class-join helper, `forwardRef` or not, export style.
   library's own component while both are loaded. Keep the copy's rules a superset of the
   original's.
 
+## Render wrapper
+
+*Fill in:* the element every render in an entry sits inside — a theme, locale or other provider
+the library's components need to render as they do in the library's own preview tooling — with
+its import; or "none".
+
+None. The demo library's components need no provider.
+
 ## Box-less wrapper
 
 *Fill in:* the literal that gives an element `display: contents` in this styling system.
@@ -111,7 +121,9 @@ Its `StandIn.value` is the literal as written: `"10px"`.
 ## Stylesheets the stage loads
 
 *Fill in:* the library stylesheets that the page and the specimen load before the stage's own,
-in order. They go in the `styles` list of `vite.config.ts`.
+in order. They go in the `styles` list of `vite.config.ts`. A stylesheet the library's preview
+tooling loads with a `<link>` tag, such as a web font, goes into a wiring stylesheet as
+`@import url(…)`, because `index.html` is generic and never edited.
 
 `demo-library/styles.css`, then `project.css`.
 
@@ -130,6 +142,8 @@ in order. They go in the `styles` list of `vite.config.ts`.
   root and the `styles` list.
 - `tsconfig.json` — type-checks the stage and the entries.
 - `project.css` — the white canvas.
+- `.gitignore` in the repository root ignores `.vite-cache/`; a lab inside a library carries its
+  own `.gitignore` for that.
 - `PROJECT.md` — this file.
 
 `package.json`, `demo-library/` and `wiring-examples/` belong to this repository, not to a lab

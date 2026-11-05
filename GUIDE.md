@@ -49,13 +49,14 @@ is taken. No env vars needed. Edits under `entries/` reload the page by themselv
 ```
 entries/<slug>/
   entry.tsx            default export: defineEntry({...})      required
-  component/           the proposed component, one or more files  required
+  component/           the proposed component, one or more files  required, unless every part is reused
     <name>.tsx
     <library-file>.tsx copy of a library component this proposal changes (optional)
   screenshots/         design images for this entry (optional)
 ```
 
-`<slug>` is kebab-case, equals the folder name, and is the URL path. The stage discovers
+An entry whose parts are all `reused` shows library components unchanged and has no
+`component/` folder. `<slug>` is kebab-case, equals the folder name, and is the URL path. The stage discovers
 `entries/*/entry.tsx` by itself; there is no registry to edit. `entry.tsx` may import from
 `stage/define-entry` (and only that from the stage), from `component/`, and from the library.
 
@@ -76,7 +77,7 @@ Types: `stage/types.ts` (the single definition). Import:
 | `screenshots` | `Screenshot[]` | Design images shown beside the specimen. See below. |
 | `controls.props` | `Control[]` | **Component props**: the component's public API — variants, sizes, booleans the API accepts. |
 | `controls.example` | `Control[]` | **Example content**: demo data only — which optional slots are filled, text lengths, item counts. |
-| `render` | `(state) => ReactNode` | Renders the specimen for the current control state. |
+| `render` | `(state) => ReactNode` | Renders the specimen for the current control state, inside the wrapper `PROJECT.md` → *Render wrapper* names, if any. Every other render function in the entry uses the same wrapper. |
 | `usage` | `(state) => string` | The exact code a consumer writes for that state. Must change when the state changes. |
 | `alternativeShape` | `string` (optional) | One line describing an alternative API shape. |
 | `axisMap` | `AxisRow[]` | Figma → code table. |

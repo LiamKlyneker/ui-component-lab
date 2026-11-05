@@ -56,6 +56,10 @@ written with it.> Tokens live in <where the library keeps them>.
 - <The class-join helper and its module, e.g. `cn` from the library's utilities.>
 - <Whether components use `forwardRef` and set a `displayName`; the export style.>
 
+## Render wrapper
+
+<The provider every render sits inside, with its import, or "none".>
+
 ## Box-less wrapper
 
 `className="<prefix>contents"`.
@@ -81,4 +85,4 @@ Its `StandIn.value` is the class as written: `"<prefix>gap-[10px]"`.
 ## Wiring files
 
 `lab/vite.config.ts`, `lab/tailwind.config.ts`, `lab/tsconfig.json`, `lab/.eslintrc.json`,
-`lab/lab.css`, `lab/PROJECT.md`.
+`lab/.gitignore`, `lab/lab.css`, `lab/PROJECT.md`.
