@@ -1,0 +1,3 @@
+:root {
+  --lab-canvas-white: var(<LIBRARY_SURFACE_TOKEN>, #ffffff);
+}

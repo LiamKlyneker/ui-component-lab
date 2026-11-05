@@ -1,0 +1,11 @@
+.demo-chip-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--demo-space-1);
+}
+
+.demo-chip-row-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}

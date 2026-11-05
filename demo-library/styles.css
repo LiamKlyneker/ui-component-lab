@@ -1,0 +1,50 @@
+:root {
+  --demo-surface-page: #ffffff;
+  --demo-text: #1f2328;
+  --demo-text-muted: #5c6670;
+  --demo-accent: #3b4a5a;
+  --demo-on-accent: #ffffff;
+  --demo-chip-bg: #eef0f2;
+  --demo-space-1: 4px;
+  --demo-space-2: 8px;
+  --demo-space-4: 16px;
+  --demo-radius-sm: 4px;
+  --demo-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  font-family: var(--demo-font);
+  color: var(--demo-text);
+}
+
+.demo-text-label {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.demo-text-caption {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--demo-text-muted);
+}
+
+.demo-contents {
+  display: contents;
+}
+
+.demo-stack {
+  display: grid;
+  gap: var(--demo-space-4);
+}
+
+.demo-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--demo-space-2);
+}
+
+.demo-icon {
+  flex: none;
+}

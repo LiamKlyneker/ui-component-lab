@@ -1,0 +1,36 @@
+.demo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--demo-space-1);
+  width: fit-content;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: var(--demo-radius-sm);
+  background: var(--demo-chip-bg);
+  color: var(--demo-text);
+}
+
+.demo-chip--accent {
+  background: var(--demo-accent);
+  color: var(--demo-on-accent);
+}
+
+.demo-chip--outline {
+  background: transparent;
+  border-color: var(--demo-chip-outline-border);
+}
+
+.demo-chip--sm {
+  padding: 1px 8px;
+}
+
+.demo-chip--md {
+  padding: 3px 10px;
+}
+
+.demo-chip svg {
+  position: relative;
+  top: var(--demo-chip-icon-offset, 0);
+  width: 12px;
+  height: 12px;
+}

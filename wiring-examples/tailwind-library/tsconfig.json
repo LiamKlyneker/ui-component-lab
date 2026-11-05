@@ -1,0 +1,23 @@
+{
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": [".vite-cache"],
+  "compilerOptions": {
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "ES2020"],
+    "jsx": "react-jsx",
+    "paths": {
+      "<ALIAS>": ["../<ALIAS_TARGET>"],
+      "<ALIAS>/*": ["../<ALIAS_TARGET>/*"]
+    },
+    "types": ["vite/client", "node"]
+  }
+}
